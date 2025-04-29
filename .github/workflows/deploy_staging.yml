@@ -21,19 +21,19 @@ jobs:
             -   name: Checkout
                 uses: actions/checkout@v4
 
-#            -   name: 📂 Sync files
-#                uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-#                with:
-#                    server: ${{ secrets.ftp_host }}
-#                    username: ${{ secrets.ftp_username }}
-#                    password: ${{ secrets.ftp_password }}
-#                    server-dir: staging.pbcservice.com/pbcs/
-#                    exclude: |
-#                        **/.git*
-#                        **/.git*/**
-#                        .gitattributes
-#                        release.sh
-#                        Readme.md
+            -   name: 📂 Sync files
+                uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+                with:
+                    server: ${{ secrets.ftp_host }}
+                    username: ${{ secrets.ftp_username }}
+                    password: ${{ secrets.ftp_password }}
+                    server-dir: divyashr.com.np/staging
+                    exclude: |
+                        **/.git*
+                        **/.git*/**
+                        .gitattributes
+                        release.sh
+                        Readme.md
 
             -   name: Execute remote SSH commands using password
                 uses: appleboy/ssh-action@v1
@@ -41,14 +41,7 @@ jobs:
                     host: ${{ secrets.ssh_host }}
                     username: ${{ secrets.ssh_username }}
                     password: ${{ secrets.ssh_password }}
-#                    port: ${{ secrets.ssh_port }}
+                    #                    port: ${{ secrets.ssh_port }}
                     script: |
-                        echo "------------------------------"
-                        echo "I am started"
                         cd divyashr.com.np/project
                         composer install
-                        pwd
-                        whoami
-                        ls -al
-                        echo "I am ended"
-                        echo "------------------------------"
