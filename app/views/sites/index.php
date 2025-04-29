@@ -373,7 +373,6 @@ $this->title="Divya - Software Engineer";
             </div>
             <div class="contact-form mt-5">
                 <form action="/" method="POST">
-                    @csrf
                     <h5 class="section-subHead mb-2"> Contact Form</h5>
                     <div class="row">
                         <div class="col-lg-6">
