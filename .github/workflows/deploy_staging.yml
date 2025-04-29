@@ -43,5 +43,10 @@ jobs:
                     password: ${{ secrets.ssh_password }}
 #                    port: ${{ secrets.ssh_port }}
                     script: |
+                        echo "------------------------------"
+                        echo "I am started"
                         pwd
                         whoami
+                        ls -al
+                        echo "I am ended"
+                        echo "------------------------------"
