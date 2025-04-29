@@ -45,6 +45,7 @@ jobs:
                     script: |
                         echo "------------------------------"
                         echo "I am started"
+                        cd divyashr.com.np
                         pwd
                         whoami
                         ls -al
