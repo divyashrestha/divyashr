@@ -10,7 +10,7 @@ class BasicAuth extends BaseMiddleware
     public function execute(): void
     {
         if (Application::basicAuth()) {
-            $AUTH_USER = 'codemantra';
+            $AUTH_USER = 'divyashr';
             $AUTH_PASS = 'password';
             header('Cache-Control: no-cache, must-revalidate, max-age=0');
             $has_supplied_credentials = ( ! (empty($_SERVER['PHP_AUTH_USER']) && empty($_SERVER['PHP_AUTH_PW'])));

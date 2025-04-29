@@ -3,7 +3,7 @@
     "description": "A simple MVC frame work created for small project",
     "type": "project",
     "require": {
-        "divyashrestha/mvc": "v0.3.4"
+        "divyashrestha/mvc": "dev-master"
     },
     "repositories": [
         {

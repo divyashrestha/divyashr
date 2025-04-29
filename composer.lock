@@ -4,20 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "82dbba713c8584533ca50e28be86ef1d",
+    "content-hash": "78cf0342718a95d402cf6ec76e4cd5a5",
     "packages": [
         {
             "name": "divyashrestha/mvc",
-            "version": "v0.3.4",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/divyashrestha/mvc.git",
-                "reference": "7e759fab52ae65e822c318f5c881bd15871656fc"
+                "reference": "f671792364d05e3639aabcb80f980cf825dad39c"
             },
             "require": {
                 "ext-pdo": "*",
                 "phpmailer/phpmailer": "^6.10"
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
@@ -34,7 +35,7 @@
                 }
             ],
             "description": "A simple php framework",
-            "time": "2025-04-29T05:23:47+00:00"
+            "time": "2025-04-29T06:36:00+00:00"
         },
         {
             "name": "phpmailer/phpmailer",
@@ -121,7 +122,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "divyashrestha/mvc": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {},
