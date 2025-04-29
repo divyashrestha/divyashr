@@ -21,19 +21,19 @@ jobs:
             -   name: Checkout
                 uses: actions/checkout@v4
 
-#            -   name: 📂 Sync files
-#                uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-#                with:
-#                    server: ${{ secrets.ftp_host }}
-#                    username: ${{ secrets.ftp_username }}
-#                    password: ${{ secrets.ftp_password }}
-#                    server-dir: 'divyashr.com.np/staging'
-#                    exclude: |
-#                        **/.git*
-#                        **/.git*/**
-#                        .gitattributes
-#                        release.sh
-#                        Readme.md
+            -   name: 📂 Sync files
+                uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+                with:
+                    server: ${{ secrets.ftp_host }}
+                    username: ${{ secrets.ftp_username }}
+                    password: ${{ secrets.ftp_password }}
+                    server-dir: /divyashr.com.np/staging
+                    exclude: |
+                        **/.git*
+                        **/.git*/**
+                        .gitattributes
+                        release.sh
+                        Readme.md
 
             -   name: Execute remote SSH commands using password
                 uses: appleboy/ssh-action@v1
