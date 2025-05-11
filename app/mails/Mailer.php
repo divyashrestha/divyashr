@@ -9,11 +9,11 @@ class Mailer
     public static function sendContactMail(array $data): string|bool
     {
         $emailBody = "
-            Message Details:
-            Name: {$data['name']}
-            Email: {$data['email']}
-            Subject: {$data['subject']}
-            Company: {$data['comments']}
+            Message Details: <br/>
+            Name: {$data['name']} <br/>
+            Email: {$data['email']} <br/>
+            Subject: {$data['subject']} <br/>
+            Company: {$data['comments']} <br/>
         ";;
         return BaseMail::sendMail(
             tos: [['email' => 'hello@divyashr.com.np'], ['email' => 'work@divyashrestha.com.np']],
