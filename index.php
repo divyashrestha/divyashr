@@ -34,6 +34,7 @@ if ($APP_ENV == 'development') {
     ini_set('display_errors', 'On');
 }
 $app = new Application(__DIR__, $app_config);
+$app->loadDirectory('app/mails');
 
 $app->on(Application::EVENT_BEFORE_REQUEST, function () {
     // echo "Before request from second installation";
