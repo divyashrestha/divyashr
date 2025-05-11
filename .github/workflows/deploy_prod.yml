@@ -1,4 +1,4 @@
-name: PBC Service Staging Deployment
+name: Production Deployment
 
 on:
     push:
@@ -7,7 +7,7 @@ on:
     workflow_dispatch:
         inputs:
             deploy:
-                description: Enter 'prod' to deploy to staging
+                description: Enter 'prod' to deploy to Production
                 required: true
                 default: "no"
 

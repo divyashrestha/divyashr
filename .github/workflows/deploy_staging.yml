@@ -1,4 +1,4 @@
-name: PBC Service Staging Deployment
+name: Staging Deployment
 
 on:
     push:
