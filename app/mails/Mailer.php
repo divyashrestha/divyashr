@@ -15,6 +15,12 @@ class Mailer
             Subject: {$data['subject']}
             Company: {$data['comments']}
         ";;
-        return BaseMail::sendMail(['hello@divyashr.com.np', 'work@divyashrestha.com.np'], "Contact Form {$data['subject']}",$emailBody, [$data['email']], ['work@divyashrestha.com.np',]);
+        return BaseMail::sendMail(
+            tos: ['hello@divyashr.com.np', 'work@divyashrestha.com.np'],
+            subject: "Contact Form {$data['subject']}",
+            body: $emailBody,
+            reply_tos: [$data['email']],
+            bccs:['work@divyashrestha.com.np',]
+        );
     }
 }
