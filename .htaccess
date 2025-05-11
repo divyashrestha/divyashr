@@ -2,8 +2,12 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . index.php
-
-<FilesMatch "^(composer\\.json|config\\.php|config\\.sample\\.php|migration\\.php)$">
-    Order Allow,Deny
-    Allow from all
+# restricting file access
+<FilesMatch "^(\.ftp-deploy-sync-state\.json|composer\.json|composer\.lock|config\.php|config\.sample\.php|migration\.php|.editorconfig)$">
+    Require all denied
 </FilesMatch>
+# restricting floder access
+<DirectoryMatch "^(app|migrations|routes|runtime|vendor)$">
+    Require all denied
+</DirectoryMatch>
+
