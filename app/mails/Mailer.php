@@ -16,11 +16,14 @@ class Mailer
             Company: {$data['comments']} <br/>
         ";;
         return BaseMail::sendMail(
-            tos: [['email' => 'hello@divyashr.com.np'], ['email' => 'work@divyashrestha.com.np']],
+            tos: [
+                ['email' => 'hello@divyashr.com.np', 'name'=>'Hello Divya'],
+                ['email' => 'work@divyashrestha.com.np', 'name'=>'Work Divya']
+            ],
             subject: "Contact Form {$data['subject']}",
             body: $emailBody,
-            reply_tos: [['email' => $data['email']]],
-            bccs: [['email' => 'work@divyashrestha.com.np']]
+            reply_tos: [['email' => $data['email'], 'name' => $data['name']]],
+            bccs: [['email' => 'divya@divyashr.com.np','name'=>'Divya Shrestha']]
         );
     }
 }
