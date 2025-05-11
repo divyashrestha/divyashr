@@ -400,8 +400,7 @@ $this->title="Divya - Software Engineer";
                         <div class="col-lg-12">
                             <div class="form-group mt-3 wow fadeInUp" data-wow-duration="1.5s" data-wow-delay=".4s">
                                     <textarea name="comments" id="comments" rows="4" class="form-control b-box"
-                                              placeholder=" Leave Your comment.." required/>
-                                </textarea>
+                                              placeholder=" Leave Your comment.." required></textarea>
                             </div>
                         </div>
                     </div>
